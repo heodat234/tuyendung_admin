@@ -83,3 +83,18 @@
 {
 	 background-color: #e8e6e6 !important;
 }
+.btn-admin
+{
+	border-radius: 0px;
+    color: white;
+    font-size: 13px;
+    width: 15%;
+}
+.orange
+{
+	background-color: #F5821F;
+}
+.profile:hover
+{
+	background-color: #EFF5FB !important;
+}

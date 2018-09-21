@@ -44,13 +44,23 @@
                                     <span class="fa fa-angle-right" style="float: right"></span>
                                 </a>
                                 <div id="dropdown-lvl1" class="panel-collapse collapse">
-                                    <div class="panel-body">
-                                        <ul class="nav navbar-nav" style="width: 100%">
-                                            <li style="width: 100%"><a href="#" class="nav-list-hs-sub">Link</a></li>
-                                            <li style="width: 100%"><a href="#" class="nav-list-hs-sub">Link</a></li>
-                                            <li style="width: 100%"><a href="#" class="nav-list-hs-sub">Link</a></li>
-                                        </ul>
-                                    </div>
+                                    <div class="checkbox" style="padding-left: 10px;font-size: 14px;font-weight: 400;">
+                                       <label><input type="checkbox" value="">Tất cả tiêu chí quản lý</label> 
+                                   </div>
+                                   <div class="checkbox" style="padding-left: 10px;font-size: 14px;font-weight: 400; width: 100%">
+                                       <label style="width: 50%"><input type="checkbox" value="">Điểm hồ sơ</label> 
+                                       <input type="text" name="" style="width: 20%;height: 50%;padding-left: 3px;font-size: 12px;margin-right: 10px" placeholder="Từ">
+                                       <input type="text" name="" style="width: 20%;height: 50%;padding-left: 3px;font-size: 12px;" placeholder="Đến">
+                                   </div>
+                                   <div class="checkbox" style="padding-left: 10px;font-size: 14px;font-weight: 400;">
+                                       <label><input type="checkbox" value="">Hồ sơ tiềm năng (7)</label> 
+                                   </div>
+                                   <div class="checkbox" style="padding-left: 10px;font-size: 14px;font-weight: 400;">
+                                       <label><input type="checkbox" value="">Hồ sơ bị chặn (1)</label> 
+                                   </div>
+                                   <div class="checkbox" style="padding-left: 10px;font-size: 14px;font-weight: 400;">
+                                       <label><input type="checkbox" value="">Hồ sơ có lịch sử tương tác (6)</label> 
+                                   </div>
                                 </div>
                             </li>
 
@@ -84,7 +94,7 @@
                                        <label><input type="checkbox" value="">Web portal (6)</label> 
                                    </div>
                                    <label style="font-weight: 350; font-size: 13px; color:#5fade0;padding-left: 30px;margin-top: -5px;" >Hiện thị thêm</label>
-                                   <input type="text" name="" style="margin-left: 30px;margin-top: 5px; padding-left: 6px; padding-bottom: 3px; padding-top: 4px; width: 235px;font-size: 13px;color: #55595c; background-color: #fff; background-image: none; border: 1px solid #ccc; margin-bottom: 10px" placeholder="Nhập tên nguồn gốc cần lọc">
+                                   <input type="text" name="" style="margin-left: 30px;margin-top: 5px; padding-left: 6px; padding-bottom: 3px; padding-top: 4px; width: 210px;font-size: 13px;color: #55595c; background-color: #fff; background-image: none; border: 1px solid #ccc; margin-bottom: 10px" placeholder="Nhập tên nguồn gốc cần lọc">
                                </div>
                            </li>
 
@@ -201,7 +211,8 @@
                             </ul>
                         </div>
                     </div>
-                    <li  id="dropdown" style="width: 100%;border-radius: 0px;border: 0.5px solid #ececec; background-color: #f6f6f6">
+                </li>
+                <li  id="dropdown" style="width: 100%;border-radius: 0px;border: 0.5px solid #ececec; background-color: #f6f6f6">
                         <a data-toggle="collapse" href="#dropdown-lvl11" style="font-weight: 600" class="nav-list-hs">
                          Tags <span class="fa fa-angle-right" style="float: right"></span>    
                      </a>
@@ -214,28 +225,82 @@
                             </ul>
                         </div>
                     </div>
-                    </li>
                 </li>
                  </ul>
+
             </div>
         </nav>
-       <button type="button" style="border: 0px;height: 30px; width: 70px; color: white;background-color: #5fade0;margin-left: 10px; margin-bottom: 20px; float: bottom" > Lưu</button>
+      <button type="button" style="border: 0px;height: 30px; width: 70px; color: white;background-color: #5fade0;margin-left: 10px; margin-bottom: 20px; float: bottom" onclick="clicksave()"> Lưu</button>
         </div>
         </div>
     </div>
 </div>
-<script type="text/javascript">
-    $(function () {
-        $('.navbar-toggle').click(function () {
-            $('.navbar-nav').toggleClass('slide-in');
-            $('.side-body').toggleClass('body-slide-in');
-            $('#search').removeClass('in').addClass('collapse').slideUp(200);    
-        });
+<div class="modal fade" id="save-preset" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <form action="#" method="POST" enctype="multipart/form-data">
 
-   // Remove menu for searching
-   $('#search-trigger').click(function () {
-    $('.navbar-nav').removeClass('slide-in');
-    $('.side-body').removeClass('body-slide-in');
-});
-});
+      <div class="modal-header" style="height: 50%; background-color: #5FA2DD;padding-bottom: 10px;padding-top: 10px;">
+        <button type="button" class="close" data-dismiss="modal" style="color: white" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title" id="myModalLabel" style="color: white;font-weight: 400;">Lưu tiêu chí lọc tổng hợp</h4>
+
+      </div>
+      <div class="modal-body">
+           <div class="row" style="margin-bottom: 10px">
+            <div class="col-md-5"><label style="font-weight: 350">Tên gọi của tiêu chí</label>
+            </div>
+            <div class="col-md-7">
+                <select style="background-color: #FFFFFF;border: 1px solid #E4E4E4;width: 312px;height: 32px; padding-left: 5px">
+                    <option style="padding: 5px">Ứng viên vị trí hành chính nhân sự</option>
+                </select>
+            </div>
+           </div>
+           <label style="font-weight: 350">Dành cho Admin:</label>
+            <div class="row">
+            <div class="col-md-5">
+                <label style="font-weight: 350">Áp dụng E-mail</label>
+            </div>
+            <div class="col-md-7"> 
+               <label style="font-weight: 350; width: 100%"><i class="fa fa-minus-circle" style="color: #F5821F"></i> &nbsp; Tin tức DXG</label>
+               <label style="font-weight: 350; width: 100%"><i class="fa fa-minus-circle" style="color: #F5821F"></i> &nbsp; Tin tức Tuyển dụng (Nhân sự)</label>
+               <label style="font-weight: 350;"><i class="fa fa-plus-circle" style="color: #5FA2DD"></i></label> &nbsp;
+                <select id="example-multiple-selected" multiple="multiple">
+                    <option value="1">Chọn tất cả</option>
+                    <option value="2" selected="selected">Tin tức chế độ nhân sự</option>
+                    <option value="3">Tin tức đãi ngộ đặc biệt</option>
+                </select>
+            </div>
+           </div>
+      </div>
+
+      <div class="modal-footer" style=" padding-top: 10px; padding-bottom: 10px">
+        <label style="float :left; font-weight: 350;padding-top: 5px;"><input type="checkbox" > &nbsp; Chia sẻ tiêu chí lọc</label>
+        <button type="button" class="btn btn-admin orange"  data-dismiss="modal">Hủy</button>
+        
+        <input type="submit" class="btn btn-admin blue" value="Lưu">  
+      </div>
+    </form>
+    </div>
+  </div>
+</div>
+<script type="text/javascript">
+
+//         $('.navbar-toggle').click(function () {
+//             $('.navbar-nav').toggleClass('slide-in');
+//             $('.side-body').toggleClass('body-slide-in');
+//             $('#search').removeClass('in').addClass('collapse').slideUp(200);    
+//         });
+
+//    // Remove menu for searching
+//    $('#search-trigger').click(function () {
+//     $('.navbar-nav').removeClass('slide-in');
+//     $('.side-body').removeClass('body-slide-in');
+// });
+
+
+    function clicksave()
+    {
+        $('#save-preset').modal('show');
+    }
+     $('#example-multiple-selected').multiselect();
 </script>

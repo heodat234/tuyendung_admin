@@ -28,6 +28,9 @@
   <!-- bootstrap wysihtml5 - text editor -->
   <link rel="stylesheet" href="<?php echo base_url()?>public/css/bootstrap3-wysihtml5.min.css">
   <link rel="stylesheet" href="<?php echo base_url()?>public/css/mycss.css">
+  <link rel="stylesheet" href="<?php echo base_url()?>public/css/bootstrap-multiselect.css">
+  <script src="<?php echo base_url()?>public/js/jquery.min.js"></script>
+  <script src="<?php echo base_url()?>public/js/bootstrap-multiselect.js"></script>
 <!-- 
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700,300italic,400italic,600italic"> -->
 </head>
@@ -63,7 +66,7 @@
 <!-- ./wrapper -->
 
 <!-- jQuery 3 -->
-<script src="<?php echo base_url()?>public/js/jquery.min.js"></script>
+
 <!-- jQuery UI 1.11.4 -->
 <script src="<?php echo base_url()?>public/js/jquery-ui.min.js"></script>
 <!-- Resolve conflict in jQuery UI tooltip with Bootstrap tooltip -->
@@ -72,17 +75,7 @@
 </script>
 <!-- Bootstrap 3.3.7 -->
 <script src="<?php echo base_url()?>public/js/bootstrap.min.js"></script>
-<!-- Morris.js charts -->
-<!-- <script src="bower_components/raphael/raphael.min.js"></script>
-<script src="bower_components/morris.js/morris.min.js"></script> -->
-<!-- Sparkline -->
-<!-- <script src="bower_components/jquery-sparkline/dist/jquery.sparkline.min.js"></script> -->
-<!-- jvectormap -->
-<!-- <script src="plugins/jvectormap/jquery-jvectormap-1.2.2.min.js"></script>
-<script src="plugins/jvectormap/jquery-jvectormap-world-mill-en.js"></script> -->
-<!-- jQuery Knob Chart -->
-<!-- <script src="bower_components/jquery-knob/dist/jquery.knob.min.js"></script> -->
-<!-- daterangepicker -->
+
 <!-- <script src="bower_components/moment/min/moment.min.js"></script> -->
 <script src="<?php echo base_url()?>public/js/daterangepicker.js"></script>
 <!-- datepicker -->
@@ -99,5 +92,6 @@
 <script src="<?php echo base_url()?>public/js/dashboard.js"></script>
 <!-- AdminLTE for demo purposes -->
 <script src="<?php echo base_url()?>public/js/demo.js"></script>
+
 </body>
 </html>

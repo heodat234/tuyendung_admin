@@ -23,7 +23,8 @@
 				<?php for($i=0; $i <5;$i++)
 				{
 					?>
-					<div class="col-md-6" style="border: 0.5px solid #ececec; padding-left: 0px; padding-right: 5px">
+					<a href="<?php echo base_url()?>index.php/handling/profile">
+					<div class="col-md-6 profile" style="border: 0.5px solid #ececec; padding-left: 0px; padding-right: 5px">
 
 						<table style="margin-top: 5px; margin-bottom: 5px">
 							<tr>
@@ -58,11 +59,11 @@
 						</table>
 
 					</div>
+				</a>
 				<?php } ?>
 			
 			</div>
 			<button type="button" style="border: 0px;height: 30px;color: white;background-color: #5fade0;margin-top: 15px;margin-left: 10px; margin-bottom: 20px;" > Thêm Hồ Sơ</button>
 		</div>    	
 </section>	
-
 

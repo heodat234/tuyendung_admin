@@ -35,5 +35,12 @@ class Handling extends CI_Controller {
 
 		$this->load->view('home/master',$this->data);
 	}
+	public function profile()
+	{
+		$this->data1['nav'] = $this->load->view('page/nav-profile',null,true);
+		$this->data['temp'] = $this->load->view('page/profile',$this->data1,true);
+
+		$this->load->view('home/master',$this->data);
+	}
 }
 ?>
