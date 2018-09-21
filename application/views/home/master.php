@@ -1,85 +1,103 @@
-<!DOCTYPE HTML>
+<!DOCTYPE html>
 <html>
 <head>
-<title>Tuyển Dụng Admin</title>
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<meta name="keywords" content="Gretong Responsive web template, Bootstrap Web Templates, Flat Web Templates, Android Compatible web template, 
-Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, SonyEricsson, Motorola web design" />
-<script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
-<!-- Bootstrap Core CSS -->
-<link href="<?php echo base_url() ?>public/css/bootstrap.min.css" rel='stylesheet' type='text/css' />
-<!-- Custom CSS -->
-<link href="<?php echo base_url() ?>public/css/style.css" rel='stylesheet' type='text/css' />
-<!-- Graph CSS -->
-<link href="<?php echo base_url() ?>public/css/font-awesome.css" rel="stylesheet"> 
-<link rel="stylesheet" href="<?php echo base_url() ?>public/css/font-awesome.min.css">
-<link href="<?php echo base_url() ?>public/css/mycss.css" rel="stylesheet"> 
-<!-- jQuery -->
-<link href='//fonts.googleapis.com/css?family=Roboto:700,500,300,100italic,100,400' rel='stylesheet' type='text/css'/>
-<link href='//fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
-<!-- lined-icons -->
-<link rel="stylesheet" href="<?php echo base_url() ?>public/css/icon-font.min.css" type='text/css' />
-<script src="<?php echo base_url() ?>public/js/amcharts.js"></script>	
-<script src="<?php echo base_url() ?>public/js/serial.js"></script>	
-<script src="<?php echo base_url() ?>public/js/light.js"></script>	
-<!-- //lined-icons -->
-<script src="<?php echo base_url() ?>public/js/jquery-1.10.2.min.js"></script>  
-</head> 
-<body>
-<div class="page-container" >
-	<div class="left-content" style="background-color: #f6f6f6">
-	   <div class="inner-content">
-			<div class="header-section">
-				<?php echo $header?>
-			</div>
-					<!-- //header-ends -->	
-				<!--content-->
-			<div class="content">
-				<!-- <div class="clearfix"></div> -->
-					<div class="content-top padding-top0">
-						<!-- <div class="clearfix"> </div> -->
-						<?php echo $temp?>
-					</div>
-				<div class="fo-top-di">
-					<?php echo $footer?>
-				</div>
-			</div>
-			<!--content-->
-		</div>
-	</div>
-	<!--//content-inner-->
-<!--/sidebar-menu-->
-	<?php echo $menu?>
-	<div class="clearfix"></div>		
-</div>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Tuyển dụng Admin</title>
+  <!-- Tell the browser to be responsive to screen width -->
+  <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+  <!-- Bootstrap 3.3.7 -->
+  <link rel="stylesheet" href="<?php echo base_url()?>public/css/bootstrap.min.css">
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="<?php echo base_url()?>public/css/font-awesome.min.css">
+  <!-- Ionicons -->
+  <link rel="stylesheet" href="<?php echo base_url()?>public/css/ionicons.min.css">
+  <!-- Theme style -->
+  <link rel="stylesheet" href="<?php echo base_url()?>public/css/AdminLTE.min.css">
+  <!-- AdminLTE Skins. Choose a skin from the css/skins
+       folder instead of downloading all of them to reduce the load. -->
+  <link rel="stylesheet" href="<?php echo base_url()?>public/css/_all-skins.min.css">
+  <!-- Morris chart -->
+ <!--  <link rel="stylesheet" href="bower_components/morris.js/morris.css"> -->
+  <!-- jvectormap -->
+ <!--  <link rel="stylesheet" href="bower_components/jvectormap/jquery-jvectormap.css"> -->
+  <!-- Date Picker -->
+  <link rel="stylesheet" href="<?php echo base_url()?>public/css/bootstrap-datepicker.min.css">
+  <!-- Daterange picker -->
+  <link rel="stylesheet" href="<?php echo base_url()?>public/css/daterangepicker.css">
+  <!-- bootstrap wysihtml5 - text editor -->
+  <link rel="stylesheet" href="<?php echo base_url()?>public/css/bootstrap3-wysihtml5.min.css">
+  <link rel="stylesheet" href="<?php echo base_url()?>public/css/mycss.css">
+<!-- 
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700,300italic,400italic,600italic"> -->
+</head>
+<body class="hold-transition skin-blue sidebar-mini">
+<div class="wrapper">
 
+ <?php echo $header; ?>
+  <!-- Left side column. contains the logo and sidebar -->
+  <aside class="main-sidebar">
+    <!-- sidebar: style can be found in sidebar.less -->
+   <?php echo $menu;?>
+ 
+  </aside>
+
+  <!-- Content Wrapper. Contains page content -->
+  <div class="content-wrapper">
+    <section class="content">
+      <div class="row">
+       
+      <?php echo $temp;?>
+        
+       
+      </div>
+    </section>
+  </div>
+  <!-- /.content-wrapper -->
+  <footer class="main-footer">
+  <?php echo $footer?>
+  </footer>
+
+  <div class="control-sidebar-bg"></div>
+</div>
+<!-- ./wrapper -->
+
+<!-- jQuery 3 -->
+<script src="<?php echo base_url()?>public/js/jquery.min.js"></script>
+<!-- jQuery UI 1.11.4 -->
+<script src="<?php echo base_url()?>public/js/jquery-ui.min.js"></script>
+<!-- Resolve conflict in jQuery UI tooltip with Bootstrap tooltip -->
 <script>
-var toggle = true;
-			
-$(".sidebar-icon").click(function() {                
-  if (toggle)
-  {
-	$(".page-container").addClass("sidebar-collapsed").removeClass("sidebar-collapsed-back");
-	$("#menu span").css({"position":"absolute"});
-  }
-  else
-  {
-	$(".page-container").removeClass("sidebar-collapsed").addClass("sidebar-collapsed-back");
-	setTimeout(function() {
-	  $("#menu span").css({"position":"relative"});
-	}, 400);
-  }
-				
-				toggle = !toggle;
-			});
+  $.widget.bridge('uibutton', $.ui.button);
 </script>
-<!--js -->
-<script src="<?php echo base_url() ?>public/js/jquery.nicescroll.js"></script>
-<script src="<?php echo base_url() ?>public/js/scripts.js"></script>
-<!-- Bootstrap Core JavaScript -->
-   <script src="<?php echo base_url() ?>public/js/bootstrap.min.js"></script>
-  
-		   <script src="<?php echo base_url() ?>public/js/menu_jquery.js"></script>
+<!-- Bootstrap 3.3.7 -->
+<script src="<?php echo base_url()?>public/js/bootstrap.min.js"></script>
+<!-- Morris.js charts -->
+<!-- <script src="bower_components/raphael/raphael.min.js"></script>
+<script src="bower_components/morris.js/morris.min.js"></script> -->
+<!-- Sparkline -->
+<!-- <script src="bower_components/jquery-sparkline/dist/jquery.sparkline.min.js"></script> -->
+<!-- jvectormap -->
+<!-- <script src="plugins/jvectormap/jquery-jvectormap-1.2.2.min.js"></script>
+<script src="plugins/jvectormap/jquery-jvectormap-world-mill-en.js"></script> -->
+<!-- jQuery Knob Chart -->
+<!-- <script src="bower_components/jquery-knob/dist/jquery.knob.min.js"></script> -->
+<!-- daterangepicker -->
+<!-- <script src="bower_components/moment/min/moment.min.js"></script> -->
+<script src="<?php echo base_url()?>public/js/daterangepicker.js"></script>
+<!-- datepicker -->
+<script src="<?php echo base_url()?>public/js/bootstrap-datepicker.min.js"></script>
+<!-- Bootstrap WYSIHTML5 -->
+<script src="<?php echo base_url()?>public/js/bootstrap3-wysihtml5.all.min.js"></script>
+<!-- Slimscroll -->
+<script src="<?php echo base_url()?>public/js/jquery.slimscroll.min.js"></script>
+<!-- FastClick -->
+<!-- <script src="bower_components/fastclick/lib/fastclick.js"></script> -->
+<!-- AdminLTE App -->
+<script src="<?php echo base_url()?>public/js/adminlte.min.js"></script>
+<!-- AdminLTE dashboard demo (This is only for demo purposes) -->
+<script src="<?php echo base_url()?>public/js/dashboard.js"></script>
+<!-- AdminLTE for demo purposes -->
+<script src="<?php echo base_url()?>public/js/demo.js"></script>
 </body>
 </html>
