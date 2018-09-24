@@ -1,3 +1,6 @@
+<div class="content-wrapper">
+    <section class="content">
+      <div class="row">
 <section class="col-lg-3 connectedSortable" >
      	<?php 
    			 echo isset($nav)? $nav : "";
@@ -67,3 +70,6 @@
 		</div>    	
 </section>	
 
+  </div>
+    </section>
+  </div>

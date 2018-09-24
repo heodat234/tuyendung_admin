@@ -28,6 +28,7 @@
   <!-- bootstrap wysihtml5 - text editor -->
   <link rel="stylesheet" href="<?php echo base_url()?>public/css/bootstrap3-wysihtml5.min.css">
   <link rel="stylesheet" href="<?php echo base_url()?>public/css/mycss.css">
+  <link rel="stylesheet" href="<?php echo base_url()?>public/css/profile.css">
   <link rel="stylesheet" href="<?php echo base_url()?>public/css/bootstrap-multiselect.css">
   <script src="<?php echo base_url()?>public/js/jquery.min.js"></script>
   <script src="<?php echo base_url()?>public/js/bootstrap-multiselect.js"></script>
@@ -37,30 +38,25 @@
 <body class="hold-transition skin-blue sidebar-mini">
 <div class="wrapper">
 
- <?php echo $header; ?>
+ <?php echo isset($header)? $header: ""; ?>
   <!-- Left side column. contains the logo and sidebar -->
-  <aside class="main-sidebar">
+  
     <!-- sidebar: style can be found in sidebar.less -->
-   <?php echo $menu;?>
+   <?php echo isset($menu)? $menu: "";?>
  
-  </aside>
+
 
   <!-- Content Wrapper. Contains page content -->
-  <div class="content-wrapper">
-    <section class="content">
-      <div class="row">
+  
        
-      <?php echo $temp;?>
+      <?php echo isset($temp)? $temp: "" ;?>
         
        
-      </div>
-    </section>
-  </div>
+    
   <!-- /.content-wrapper -->
-  <footer class="main-footer">
-  <?php echo $footer?>
-  </footer>
-
+  
+  <?php echo isset($footer)? $footer : "";?>
+ 
   <div class="control-sidebar-bg"></div>
 </div>
 <!-- ./wrapper -->
