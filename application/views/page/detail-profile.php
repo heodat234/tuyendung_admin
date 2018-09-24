@@ -31,6 +31,7 @@
 		</div>
 	</div>
 	<div style="height: 20px"></div>
+	<!-- ket thuc phan thong tin chung -->
 <div class="panel-group" id="accordion">
   <div class="panel panel-default" style="border-radius: 0px;border: 0px">
     <div class="panel-heading blue" style="border-radius: 0px; padding: 0px; background-color: #5fade0">    
@@ -47,7 +48,7 @@
         <li ><a data-toggle="tab" href="#software" style="height: 30px;border-radius: 0px;font-size: 14px;padding-left: 6px; padding-right: 6px;padding-top: 6px;" >Tin học</a></li>
     </ul>
     </div>
-
+    <!-- ket thuc phan heading cua tab 1 thong tin ung vien -->
 
     <div id="collapse1" class="panel-collapse collapse in">
       <div class="panel-body" style="padding-left: 0px;padding-right: 0px; padding-top: 7px;padding-bottom: 0px">
@@ -62,6 +63,7 @@
       						 <i class="fa fa-angle-right"></i></a>
 				     	</div>
 				    </div>
+				    <!-- heading ho so ca nhan -->
 				    <div id="collapsetotal1" class="panel-collapse collapse in">
 				      <div class="panel-body" style="border: 0px">
 			     	 	 <div class="width100">
@@ -93,8 +95,9 @@
 				         </div>
 				  	  </div>
 				    </div>
+				    <!-- body ho so ca nhan -->
 				  </div>
-
+				<!--   ket thuc ho so ca nhan -->
 				  <div class="panel panel-default" style="border-radius: 0px;border: 0px">
 				    <div class="panel-heading" style="border-radius: 0px; padding: 0px; background-color: #EFF5FB">
 				     	<div style="text-align: right;">
@@ -103,6 +106,7 @@
       						 <i class="fa fa-angle-right"></i></a>
 				     	</div>
 				    </div>
+				    <!-- heading ho so noi bo -->
 				    <div id="collapsetotal2" class="panel-collapse collapse in">
 				      <div class="panel-body" style="border: 0px">
 				          <div class="width100">
@@ -126,56 +130,114 @@
 				             	<input type="text" name="" class="textbox">
 				             </div>   
 				         </div>
+				         <br><br>
 				         <div class="width100">
 				             <label for="text" class="width20 col-xs-3 label-profile">Nguồn hồ sơ</label>
 				             <div class="col-xs-3 width30 padding-lr0">
-				             	<input type="text" name="" class="textbox">
+				             	<select class="textbox">
+				             		<option>Chọn nguồn hồ sơ...</option>
+				             	</select>
 				             </div>
-				                
+				         </div>
+				         <br><br>
+				         <div class="width100">
+				             <label for="text" class="width20 col-xs-3 label-profile">Vị trí phù hợp</label>
+				             <div class="col-xs-9 width80 padding-lr0">
+				             	<input type="text" name="" class="textbox2">
+				             </div>
+				         </div>
+				         <br><br>
+				         <div class="width100">
+				             <label for="text" class="width20 col-xs-3 label-profile">Tag</label>
+				             <div class="col-xs-9 width80 padding-lr0">
+				             	<input type="text" name="" class="textbox2">
+				             </div>
+				         </div>
+				         <br><br>
+				         <div class="width100">
+				            <label for="text" class="width20 col-xs-3 label-profile">Hồ sơ tải lên</label>
+				            <div class="width80 col-xs-9 padding-lr0"">
+				             <label class="fontArial colorcyan labelcontent" ><i class="fa fa-upload"></i> Tải lên hồ sơ</label>
+				             
+				            </div>
 				         </div>
 				  	  </div>
 				    </div>
+				    <!-- body ho so noi bo -->
 				  </div>
-
-
-
-
-
+				  <!-- ket thuc ho so noi bo -->
 				</div>
        		 </div>
+       		 <!-- ket thuc id tab tong quat -->
     	</div>
+      </div>
+    </div>
+    <!-- ket thuc body cua tab 1 thong tin ung vien -->
+  </div>
+  	<!-- ket thuc tat ca tab 1 thong tin ung vien -->
 
+  <div class="panel panel-default" style="border-radius: 0px;border: 0px">
+    <div class="panel-heading" style="border-radius: 0px; padding: 0px; background-color: #5fade0"> 
+        <a data-toggle="collapse" data-parent="#accordion" href="#collapse2" style="float: right; font-size: 23;color: white; padding-right: 15px; padding-top: 8px">
+       <i class="fa fa-angle-right"></i></a>
+       <div style="padding-top: 10px; padding-left: 10px;border: 0px">
+       	<label style="height: 25px;border-radius: 0px;font-size: 14px;padding-left: 6px; padding-right: 6px;padding-top: 6px; color: white; font-weight: 450">
+       		Lịch sử hồ sơ
+       	</label>
+       </div>
+      	
+    </div>
+    <div id="collapse2" class="panel-collapse collapse">
+      <div class="panel-body pad0">
+      	<table style="width: 100%">
+      		<tr >
+      			<td class="table-history" style="width: 4%"><i class="fa fa-comment-o" ></i></td>
+      			<td class="table-his-cont" style="width: 96%">
+      				<img src="<?php echo base_url()?>public/images/2.jpg"  width="32px" height="32px" style="float:left; margin-right: 4px">
+      				<div class="col-xs-11" style="padding-left: 0px;margin-top: -3px">
+      					<label class="text-his fontArial" style="margin-bottom: 2px"><span style="font-weight: 600">Mai phương - Recruiter</span><span class="colorgray"> thêm Nhận xét/ Đánh giá 12 giờ trước</span></label>
+      					<br>
+      					<label class="colorgray fontArial" style="font-weight: 400; font-size: 13px;margin-bottom: 3px;">Hiện thị với tất cả mọi người</label>
+      				</div>
+      					<label class="fontArial text-his" >Hồ sơ tốt - 80 điểm</label>
+      			</td>
+      		</tr>
+      		<tr >
+      			<td class="table-history" style="width: 4%"><i class="fa fa-calendar"></i></td>
+      			<td class="table-his-cont" style="width: 96%">
+      				<div class="col-xs-11" style="padding-left: 0px;margin-top: -3px">
+      					<label class="text-his fontArial" style="margin-bottom: 2px"><span style="font-weight: 600">Mai phương - Recruiter</span><span class="colorgray"> thêm Nhận xét/ Đánh giá 12 giờ trước</span></label>
+      					<br>
+      					<label class="colorgray fontArial" style="font-weight: 400; font-size: 13px;margin-bottom: 3px;">Hiện thị với tất cả mọi người</label>
+      				</div>
+      					
+      			</td>
+      		</tr>
+      	</table>
       </div>
     </div>
   </div>
-
-  <div class="panel panel-default">
-    <div class="panel-heading">
-      <h4 class="panel-title">
-        <a data-toggle="collapse" data-parent="#accordion" href="#collapse2">
-        Collapsible Group 2</a>
-      </h4>
-    </div>
-    <div id="collapse2" class="panel-collapse collapse">
-      <div class="panel-body">Lorem ipsum dolor sit amet, consectetur adipisicing elit,
-      sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
-      minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
-      commodo consequat.</div>
-    </div>
-  </div>
-  <div class="panel panel-default">
-    <div class="panel-heading">
-      <h4 class="panel-title">
-        <a data-toggle="collapse" data-parent="#accordion" href="#collapse3">
-        Collapsible Group 3</a>
-      </h4>
+  <div class="panel panel-default" style="border-radius: 0px;border: 0px">
+    <div class="panel-heading" style="border-radius: 0px; padding: 0px; background-color: #5fade0">
+      <a data-toggle="collapse" data-parent="#accordion" href="#collapse3" style="float: right; font-size: 23;color: white; padding-right: 15px; padding-top: 8px">
+       <i class="fa fa-angle-right"></i></a>
+        <div style="padding-top: 10px; padding-left: 10px;border: 0px">
+       <label style="height: 25px;border-radius: 0px;font-size: 14px;padding-left: 6px; padding-right: 6px;padding-top: 6px; color: white; font-weight: 450">
+       		Nhân xét/  Đánh giá
+       	</label>
+       </div>
     </div>
     <div id="collapse3" class="panel-collapse collapse">
-      <div class="panel-body">Lorem ipsum dolor sit amet, consectetur adipisicing elit,
-      sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
-      minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
-      commodo consequat.</div>
+      <div class="panel-body">
+      	<img src="<?php echo base_url()?>public/images/2.jpg" class="col-xs-1" width="32px" height="32px">
+      	<div class="col-xs-3 width30 padding-lr0">
+	     	<select class="textbox">
+	     		<option>Chọn nguồn hồ sơ...</option>
+	     	</select>
+	     </div>
+      </div>
     </div>
   </div>
 </div>
+	<!-- ket thuc 3 tab -->
 </div>
