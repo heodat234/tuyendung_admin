@@ -21,7 +21,7 @@ class Handling extends CI_Controller {
 		$this->load->library('session');
 		
 		
-		// $this->load->model(array('Login_model'));
+		$this->load->model(array('Candidate_model'));
 		// $this->load->helper(array('url','my_helper','file'));
 		$this->data['header'] = $this->load->view('home/header',null,true);
 	    $this->data['menu'] = $this->load->view('home/menu',null,true);
@@ -29,7 +29,7 @@ class Handling extends CI_Controller {
 	}
 	public function index()
 	{
-
+		$this->data1['candidate'] = $this->Candidate_model->selectAllCan();
 		$this->data1['nav'] = $this->load->view('page/nav',null,true);
 		$this->data['temp'] = $this->load->view('page/content',$this->data1,true);
 

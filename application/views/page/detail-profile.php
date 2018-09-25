@@ -229,12 +229,21 @@
     </div>
     <div id="collapse3" class="panel-collapse collapse">
       <div class="panel-body">
-      	<img src="<?php echo base_url()?>public/images/2.jpg" class="col-xs-1" width="32px" height="32px">
-      	<div class="col-xs-3 width30 padding-lr0">
-	     	<select class="textbox">
-	     		<option>Chọn nguồn hồ sơ...</option>
+      	<img src="<?php echo base_url()?>public/images/2.jpg" class="col-xs-1" style="padding-left: 9px;" width="32px" height="32px">
+      	<div class="col-xs-11 width80 padding-lr0">
+	     	<select class="text-cmt width30" style="margin-bottom: 9px;" >
+	     		<option>Nhận xét/ Đánh giá...</option>
 	     	</select>
+	     	<textarea style="resize: none; width:100%; padding-left: 4px; padding-right: 4px;margin-bottom: 9px; border: 1px solid #E4E4E4;" rows="3" placeholder="Nhận xét" ></textarea>
+	     	
+	     	<input type="text" name="" class="text-cmt width30">
 	     </div>
+	     	
+	     <div style="border: 0.5px solid #ccc; width: 100%;margin-top: 
+	     150px;" class="padding-lr0"></div>
+	     <input type="checkbox" name="" style="margin-top: 10px; margin-left: 10px"> Chia sẽ nhật ký/ Đánh giá này
+	     <button type="submit" style="float: right;border: 0px;height: 30px; width: 70px; color: white;background-color: #5fade0;margin-top: 10px">Lưu</button>
+	     
       </div>
     </div>
   </div>
